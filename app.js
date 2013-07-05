@@ -12,7 +12,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 }]);
 
 app.factory('Page', function(){
-  var title = '';
+  var title;
   return {
     title: function() {return title;},
     setTitle: function(newTitle) {title = newTitle;},
