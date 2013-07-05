@@ -4,15 +4,15 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   var content = " content goes here..."
 
   $routeProvider.
-    when('/', {template: 'Home Page' + content, controller: MainCtrl}).
-    when('/first', {template: 'First Page' + content, controller: FirstCtrl}).
-    when('/second', {template: 'Second Page' + content, controller: SecondCtrl}).
+    when('/', {template: 'Home page' + content, controller: MainCtrl}).
+    when('/first', {template: 'First page' + content, controller: FirstCtrl}).
+    when('/second', {template: 'Second page' + content, controller: SecondCtrl}).
     otherwise({redirectTo: '/'});
   $locationProvider.html5Mode( true );
 }]);
 
-app.factory('Page', function(){
-  var title = 'default';
+app.factory('View', function(){
+  var title;
   return {
     title: function() {return title;},
     setTitle: function(newTitle) {title = newTitle;},
@@ -21,16 +21,16 @@ app.factory('Page', function(){
   };
 });
 
-function MainCtrl($scope, Page) {
-  $scope.Page = Page;
-  Page.setTitle("Home");
-  Page.setMessage("You are currently viewing the Home page.");
+function MainCtrl($scope, View) {
+  $scope.View = View;
+  View.setTitle("Home");
+  View.setMessage("You are currently viewing the Home page.");
 }
-function FirstCtrl($scope, Page) {
-  Page.setTitle('First');
-  Page.setMessage("You are currently viewing the First page.");
+function FirstCtrl($scope, View) {
+  View.setTitle('First');
+  View.setMessage("You are currently viewing the First page.");
 }
-function SecondCtrl($scope, Page) {
-  Page.setTitle('Second');
-  Page.setMessage("You are currently viewing the Second page.");
+function SecondCtrl($scope, View) {
+  View.setTitle('Second');
+  View.setMessage("You are currently viewing the Second page.");
 }

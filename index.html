@@ -2,7 +2,7 @@
 <html ng-app="dynamicViews" ng-controller="MainCtrl">
   <head>
     <meta charset="utf-8">
-    <title>{{Page.title()}}</title>
+    <title>{{View.title()}}</title>
     <link href="style.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
@@ -25,7 +25,7 @@
     <!-- main content -->
     <div class="container">
       <div class="center hero-unit">
-        <h1>{{Page.message()}}</h1><br/>
+        <h1>{{View.message()}}</h1><br/>
       	<div ng-view></div>
       </div>
     </div>
