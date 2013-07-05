@@ -1,0 +1,1 @@
+This is an example of the basic structure needed to make an AngularJS app with content being delivered to different views from the controllers dynamically.
